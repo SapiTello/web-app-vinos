@@ -1,0 +1,33 @@
+<!-- Modulos/Gestion/templates/gestion/base.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Tienda de Vinos{% endblock %}</title>
+    {% load static %} <!-- Asegúrate de cargar la etiqueta 'static' -->
+    <link rel="stylesheet" href="{% static 'gestion/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+                <li><a href="{% url 'clientes' %}">Clientes</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- El contenido de las otras plantillas irá aquí -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Tienda de Vinos</p>
+    </footer>
+</body>
+</html>
