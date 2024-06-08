@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Modulos.Gestion'
+    'Modulos.Gestion',
+    'payment.apps.PaymentConfig'
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'appvinos',
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': 'ivan',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -126,3 +127,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51POXPUL8hUiuuZM6cxd6gBjddWkS0p9vk4HI7Gw5oqLvIaHdfzSzYMeqLmcp0c8mnZ4ZBKfwQqEM8UCnOI2PeaCE00XS2gEosz'
+STRIPE_SECRET_KEY = 'sk_test_51POXPUL8hUiuuZM6cliiBo2YEDacvy0dge0aTd3xh5fYeMY2b8aB1kxldRM9UBHh7ZV3GyflFCoO5Ul1Ds4FoAQq00ox1WnZJw'
+STRIPE_API_VERSION = ''
+
